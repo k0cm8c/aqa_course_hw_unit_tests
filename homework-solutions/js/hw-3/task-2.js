@@ -4,3 +4,17 @@
 n + nn + nnn, где n не перемножаются, а конкатенируются
 
 */
+
+let n = 5;
+
+if (n >= 1 && n <= 9) {
+    n = String(n);
+    let nn = String(n) + String(n);
+    let nnn = String(n) + String(n) + String(n);
+    let result = n + nn + nnn;
+    console.log("Ваш результат:", result);
+} else {
+    console.log("Ошибка ввода данных, попробуйте ввести целое число от 1 до 9");
+}
+
+//////////////////////////////////////////////////////////////////
