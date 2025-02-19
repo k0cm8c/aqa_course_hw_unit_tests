@@ -50,4 +50,3 @@
     "Technical work";
 
   console.log(message);
-
