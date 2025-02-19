@@ -13,4 +13,40 @@
     - Иначе выводите "Technical work".
   5. Проверить задание со следующими значениями в переменной age: 10, 17, 18, 19, 59, 60, 61
 
-  *///
+  */
+
+  ////////////////////////////Через оператор "if"///////////////////////////////////////
+  
+
+  let minAge = 18;
+  let maxAge = 60;
+  let age = 61;
+
+  if (typeof age !== "number") {
+    console.log("Incorrect data type");
+  } else if (age < minAge) {
+    console.log("You don't have access cause your age is " + age + ". It's less then 18.");
+  } else if (age >= minAge && age < maxAge) {
+    console.log("Welcome  !");
+  } else if (age > maxAge) {
+    console.log("Keep calm and look Culture channel");
+  } else {
+    console.log("Technical work");
+  }
+
+  ////////////////////////////Через оператор "?"///////////////////////////////////////
+
+  
+
+  let minAge = 18;
+  let maxAge = 60;
+  let age = 59;
+  let userName = "Василий";
+
+  let message = (typeof age !== "number") ? "Incorrect data type" :
+    (age < minAge) ? "You don't have access cause your age is " + age + ". It's less then 18." :
+    (age >= minAge && age < maxAge) ? "Welcome, " + userName + "!" :
+    (age > maxAge) ? "Keep calm and look Culture channel" :
+    "Technical work";
+
+  console.log(message);
