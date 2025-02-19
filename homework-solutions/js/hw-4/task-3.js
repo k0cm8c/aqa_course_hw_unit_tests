@@ -7,11 +7,13 @@
 
 */
 
+////////////////////////////Через оператор "if"///////////////////////////////////////
+
   let minAge = 18;
   let maxAge = 60;
-  let age = Number("61");
+  let age = "10";
 
-  if (typeof age !== "number") {
+  if (isNaN(age)) {
     console.log("Incorrect data type");
   } else if (age < minAge) {
     console.log("You don't have access cause your age is " + age + ". It's less then 18.");
@@ -22,3 +24,20 @@
   } else {
     console.log("Technical work");
   }
+
+  ////////////////////////////Через оператор "?"///////////////////////////////////////
+
+  
+
+  let minAge = 18;
+  let maxAge = 60;
+  let age = "18";
+  let userName = "Василий";
+  
+  let message = (isNaN(age)) ? "Incorrect data type" :
+    (age < minAge) ? "You don't have access cause your age is " + age + ". It's less then 18." :
+    (age >= minAge && age < maxAge) ? "Welcome, " + userName + "!" :
+    (age > maxAge) ? "Keep calm and look Culture channel" :
+    "Technical work";
+
+  console.log(message);
