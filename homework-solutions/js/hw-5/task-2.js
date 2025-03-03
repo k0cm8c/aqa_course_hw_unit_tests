@@ -18,4 +18,27 @@
  */
 let fizzBuzzResult = '';
 
+for (let i = 1; i <=100; i++) {
+    if ( i % 100 === 0) {
+        fizzBuzzResult += `${i} - делится на 5`
+        continue;
+    }
+    if (i % 3 === 0 && i % 5 === 0) {
+        fizzBuzzResult += `${i} - делится и на 3 и на 5\n`;
+        continue;
+    }
+    if (i % 5 === 0) {
+        fizzBuzzResult += `${i} - делится на 5\n`;
+        continue;
+    }
+    if (i % 3 === 0) {
+        fizzBuzzResult += `${i} - делится на 3\n`;
+        continue;
+    } else {
+        fizzBuzzResult += `${i}\n`;
+        continue;
+    }
+}
+console.log(fizzBuzzResult);
+
 export { fizzBuzzResult };

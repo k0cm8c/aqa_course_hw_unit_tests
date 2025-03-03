@@ -13,7 +13,27 @@
   const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
 */
 
-let resultUnique;
+const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+const myPizzasT1 = ['Peperoni', 'Margherita', 'Diablo', 'Vegetarian'];
+const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+
+let resultUnique = [];
 let resultNull;
+let competitorPizzasLowerCase = [];
+
+for (let pizza of competitorPizzas) {
+  competitorPizzasLowerCase.push(pizza.toLowerCase());
+}
+
+for (let pizza of myPizzasT1) {
+  competitorPizzasLowerCase.includes(pizza.toLowerCase()) ? (resultNull = null) : resultUnique.push(pizza.toLowerCase());
+}
+
+for (let pizza of myPizzasT2) {
+  competitorPizzasLowerCase.includes(pizza.toLowerCase()) ? (resultNull = null) : resultUnique.push(pizza.toLowerCase());
+}
+
+console.log(resultUnique);
 
 export { resultNull, resultUnique };
+
